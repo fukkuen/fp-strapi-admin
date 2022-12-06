@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "wp_large_url": {
+      "type": "string"
+    },
+    "wp_thumb_url": {
+      "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "post"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "post"
+    }
+  }
+}

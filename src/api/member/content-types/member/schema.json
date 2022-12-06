@@ -1,23 +1,23 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "members",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "blog"
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "content": {
-      "type": "richtext"
-    },
-    "title": {
+    "name": {
       "type": "string"
     },
-    "feature_image": {
+    "slug": {
+      "type": "uid"
+    },
+    "profile_pic": {
       "allowedTypes": [
         "images",
         "files",
@@ -25,7 +25,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }
