@@ -21,9 +21,9 @@
     "description": {
       "type": "text"
     },
-    "post": {
+    "posts": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::post.post",
       "inversedBy": "categories"
     }
