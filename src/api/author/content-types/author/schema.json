@@ -4,7 +4,8 @@
   "info": {
     "singularName": "author",
     "pluralName": "authors",
-    "displayName": "Author"
+    "displayName": "People",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,17 +16,45 @@
       "type": "string"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "mappedBy": "artists"
+    },
+    "is_member": {
+      "type": "boolean",
+      "default": false
+    },
+    "external_url": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "richtext"
+    },
+    "membership_start": {
+      "type": "date"
+    },
+    "membership_end": {
+      "type": "date"
+    },
+    "wp_url": {
+      "type": "string"
     }
   }
 }

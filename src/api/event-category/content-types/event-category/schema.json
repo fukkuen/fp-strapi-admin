@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "event_categories",
   "info": {
-    "singularName": "tag",
-    "pluralName": "tags",
-    "displayName": "Tag",
-    "description": ""
+    "singularName": "event-category",
+    "pluralName": "event-categories",
+    "displayName": "Event Category"
   },
   "options": {
     "draftAndPublish": false
@@ -18,17 +17,14 @@
     "slug": {
       "type": "uid"
     },
-    "posts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "tags"
+    "description": {
+      "type": "text"
     },
     "events": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::event.event",
-      "mappedBy": "tags"
+      "mappedBy": "event_categories"
     }
   }
 }
