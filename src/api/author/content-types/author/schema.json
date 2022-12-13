@@ -58,6 +58,15 @@
     },
     "title": {
       "type": "string"
+    },
+    "founding_member": {
+      "type": "boolean"
+    },
+    "oversea_affiliate": {
+      "type": "boolean"
+    },
+    "oversea_artist": {
+      "type": "boolean"
     }
   }
 }
