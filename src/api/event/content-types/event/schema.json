@@ -33,7 +33,7 @@
       "pluginOptions": {}
     },
     "start_date": {
-      "type": "datetime",
+      "type": "date",
       "pluginOptions": {}
     },
     "excerpt": {
@@ -72,6 +72,9 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "end_date": {
+      "type": "date"
     }
   }
 }
