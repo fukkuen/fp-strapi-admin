@@ -100,6 +100,11 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "reviews"
+    },
+    "related_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
     }
   }
 }
