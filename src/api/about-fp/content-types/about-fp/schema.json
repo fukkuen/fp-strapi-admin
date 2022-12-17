@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_fps",
+  "info": {
+    "singularName": "about-fp",
+    "pluralName": "about-fps",
+    "displayName": "About FP",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "introduction": {
+      "type": "richtext"
+    },
+    "conceptual": {
+      "type": "richtext"
+    },
+    "contact": {
+      "type": "richtext"
+    }
+  }
+}
