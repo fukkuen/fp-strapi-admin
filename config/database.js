@@ -1,13 +1,18 @@
-console.log('loading dev database.js')
+const parse = require('pg-connection-string').parse;
+const config = parse(process.env.DATABASE_URL);
+
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: "strapi-database.cejgpwrykkoc.ap-southeast-1.rds.amazonaws.com",
-      port: 5432,
-      database: "strapi",
-      user: "postgres",
-      password: "Yy27022070",
+      host: config.host,
+      port: config.port,
+      database: config.database,
+      user: config.user,
+      password: config.password,
+      ssl: {
+        rejectUnauthorized: false
+      },
     },
     debug: false,
   },
