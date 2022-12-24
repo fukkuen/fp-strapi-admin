@@ -65,8 +65,11 @@
     "oversea_affiliate": {
       "type": "boolean"
     },
-    "oversea_artist": {
-      "type": "boolean"
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "authors"
     }
   }
 }
